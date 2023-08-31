@@ -2,7 +2,7 @@ function twoSum(nums: number[], target: number): number[] {
   let result: number[] = [];
 
   for (let i = 0; i < nums.length; i++) {
-    for (let j = 0; j < nums.length; j++) {
+    for (let j = i + 1; j < nums.length; j++) {
       if (i === j) {
         continue;
       }
@@ -13,5 +13,5 @@ function twoSum(nums: number[], target: number): number[] {
     }
   }
 
-  return result.slice(0, 2);
+  return result;
 }
